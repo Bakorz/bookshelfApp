@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <title>Bookshelf App</title>
+    <script defer src="src/main.js"></script>
+    <link rel="stylesheet" href="src/styles/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Bookshelf App</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Tambah Buku Baru</h2>
+        <form id="bookForm" action="#">
+          <div>
+            <label for="bookFormTitle">Judul</label>
+            <input class="inputForm" id="bookFormTitle" type="text" required/>
+          </div>
+          <div>
+            <label for="bookFormAuthor">Penulis</label>
+            <input class="inputForm" id="bookFormAuthor" type="text" required/>
+          </div>
+          <div>
+            <label for="bookFormYear">Tahun</label>
+            <input class="inputForm" id="bookFormYear" type="number" value="" required/>
+          </div>
+          <div>
+            <label for="bookFormIsComplete">Selesai dibaca</label>
+            <input
+            id="bookFormIsComplete"
+            type="checkbox"
+            />
+          </div>
+          <button class="submitForm" type="submit">
+            Masukkan buku ke rak
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Cari Buku</h2>
+        <form id="searchBook" data-testid="searchBookForm">
+          <div>
+            <label for="searchBookTitle">Judul</label>
+            <input id="searchBookTitle" type="text" data-testid="searchBookFormTitleInput" />
+          </div>
+          <button id="searchSubmit" class="submitForm" type="submit" data-testid="searchBookFormSubmitButton">
+            Cari
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Belum selesai dibaca</h2>
+        <div id="incompleteBookList">
+        </div>
+      </section>
+
+      <section>
+        <h2>Selesai dibaca</h2>
+        <div id="completeBookList">
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
