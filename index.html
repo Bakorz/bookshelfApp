@@ -20,27 +20,28 @@
     <main>
       <section>
         <h2>Tambah Buku Baru</h2>
-        <form id="bookForm" action="#">
+        <form id="bookForm" action="#" data-testid="bookForm">
           <div>
             <label for="bookFormTitle">Judul</label>
-            <input class="inputForm" id="bookFormTitle" type="text" required/>
+            <input class="inputForm" id="bookFormTitle" data-testid="bookFormTitleInput" type="text" required/>
           </div>
           <div>
             <label for="bookFormAuthor">Penulis</label>
-            <input class="inputForm" id="bookFormAuthor" type="text" required/>
+            <input class="inputForm" id="bookFormAuthor" data-testid="bookFormAuthorInput" type="text" required/>
           </div>
           <div>
             <label for="bookFormYear">Tahun</label>
-            <input class="inputForm" id="bookFormYear" type="number" value="" required/>
+            <input class="inputForm" id="bookFormYear" data-testid="bookFormYearInput" type="number" value="" required/>
           </div>
           <div>
             <label for="bookFormIsComplete">Selesai dibaca</label>
             <input
             id="bookFormIsComplete"
             type="checkbox"
+            data-testid="bookFormIsCompleteCheckbox"
             />
           </div>
-          <button class="submitForm" type="submit">
+          <button class="submitForm" data-testid="bookFormSubmitButton" type="submit">
             Masukkan buku ke rak
           </button>
         </form>
@@ -61,13 +62,13 @@
 
       <section>
         <h2>Belum selesai dibaca</h2>
-        <div id="incompleteBookList">
+        <div id="incompleteBookList" data-testid="incompleteBookList">
         </div>
       </section>
 
       <section>
         <h2>Selesai dibaca</h2>
-        <div id="completeBookList">
+        <div id="completeBookList" data-testid="completeBookList">
         </div>
       </section>
     </main>
